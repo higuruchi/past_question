@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>過去問データベース</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="add_user.js"></script>
+</head>
+<body>
+    <h1>過去問データベース</h1>
+
+    <p class="error"></p>
+    
+    <p>学籍番号を入力してください</p>
+    
+    <input type="text" name="stuid" placeholder="学籍番号"><br/>
+
+    <p id="nickname">ニックネームを入力してください</p>
+    <input type="text" name="nickname" placeholder="ユーザ名"><br/>
+
+    <p id="pass">パスワードを入力してください</p>
+    <input type="password" name="pass" placeholder="パスワード"><br/>
+
+    <p id="pass2">パスワードをもう一度入力してください</p>   
+    <input type="password" name="pass2" placeholder="パスワード再入力"><br/>
+    
+    <label>パスワードを表示する</label>
+    <input type="checkbox" id="seePass"><br/>
+    
+    <input type="button" value="登録"></button>
+</body>
+</html>

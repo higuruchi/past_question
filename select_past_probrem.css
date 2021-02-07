@@ -1,0 +1,145 @@
+body {
+    margin: 0px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(2, 2, 51);
+}
+
+header h1, header h2 {
+    color: #9ec34b;
+}
+
+header ul li a {
+    color: rgb(14, 148, 148);
+}
+
+ul.hmenu {
+    list-style: none;
+}
+
+.wrapper {
+    display: flex;
+    flex: 1;
+}
+
+aside {
+    width: 300px;
+}
+
+aside tbody td {
+    position: relative;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #03A9F4;/*色*/
+    border: solid 1px #0f9ada;/*線色*/
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+thead tr th {
+    text-align: left;
+}
+
+
+/* .main{
+    flex: 1;
+} */
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    box-shadow: 1px 1px 5px 1px #999;
+}
+
+.submit {
+    display: flex;
+}
+
+.comment {
+    max-height: 500px;
+    overflow-y:scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.comment::-webkit-scrollbar {
+    display: none;
+}
+
+div.time {
+    font-size: 10px;
+    color: gray;
+}
+
+div.mcomment {
+    border-bottom: solid 2px gray;
+}
+
+.login {
+    display: none;
+}
+
+footer {
+    height: 100px;
+    background-color:  rgb(2, 2, 51);
+}
+
+input[type="text"] {
+    width: 500px; /*親要素いっぱい広げる*/
+    padding: 10px 15px; /*ボックスを大きくする*/
+    font-size: 16px;
+    border-radius: 3px; /*ボックス角の丸み*/
+    border: 2px solid #ddd; /*枠線*/
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+}
+
+input[type="text"]:focus {
+    border: 2px solid rgb(115, 115, 199); 
+    z-index: 10;
+    outline: 0;
+}
+button {
+    display: inline-block;
+    max-width: 180px;
+    text-align: left;
+    border: 2px solid #9ec34b;
+    font-size: 16px;
+    color: #9ec34b;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: .4s;
+}
+
+button:hover {
+    background-color: #9ec34b;
+    border-color: #cbe585;
+    color: #FFF;
+
+}
+details summary {
+    outline: none;
+    list-style: none;
+    cursor: pointer;
+}
+details {
+    padding-bottom: 20px;
+}
+summary::-webkit-details-marker {
+    display: none;
+}
+
+
+left {
+    width: 400px;
+}

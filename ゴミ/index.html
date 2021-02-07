@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>過去問データベース</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <h1>過去問データベース</h1>
+    <br/>
+    <a href="add_user.html">新規登録</a>
+
+    <form method="post" action="login.php">
+        <p>ユーザ名を入力してください</p>
+        <p class="errorNickname"></p>
+        <input type="text" name="nickname" placeholder="ユーザ名"><br/>
+        <p>パスワードを入力してください</p>
+        <p class="errorPassword"></p>
+        <input type="password" name="pass" placeholder="パスワード"><br/>
+        <input type="submit" value="ログイン">
+    </form>
+
+    <a href="guest_login.php">ゲストとしてログインする</a>
+
+</body>
+</html>

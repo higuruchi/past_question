@@ -1,0 +1,29 @@
+CREATE TABLE user (
+	stuid char(6) PRIMARY KEY,
+	nickname char(20) NOT NULL,
+	password int NOT NULL
+)CHARSET=utf8;
+
+CREATE TABLE class (
+	classid int NOT NULL PRIMARY KEY,
+	classname char(20) NOT NULL
+)CHARSET=utf8;
+
+CREATE TABLE pastprobrem (
+	classid int,
+	year int,
+	directory char(30) NOT NULL,
+	PRIMARY KEY(classid, year),
+	FOREIGN KEY(classid) REFERENCES class(classid)
+)CHARSET=utf8;
+
+CREATE TABLE comment (
+	commentid int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	classid int NOT NULL,
+	stuid char(6) NOT NULL,
+	comment varchar(1000) NOT NULL,
+	time DATETIME DEFAULT CURRENT_TIMESTAMP,
+	reply int default -1,
+	FOREIGN KEY (stuid) REFERENCES user(stuid),
+	FOREIGN KEY (classid) REFERENCES class(classid)
+)CHARSET=utf8;

@@ -1,0 +1,43 @@
+・メインコメント
+	返信
+	返信
+	返信
+このように表示をするのに、commentテーブルから、メインコメント
+（reply = -1）となっているものを取り出し、その後、返信コメント
+（reply != -1）となっているものをreplyでソートされた状態で取り出す。
+メインコメントを表示し、その後、replyが任意のコメントidと
+なっているものをすべて表示する。
+
+
+・メインコメントを取り出すSQL
+SELECT * 
+FROM comment 
+WHERE reply = -1 AND classid = 任意のクラスid
+ORDER BY time ASC;
+
+・返信コメントと取り出すSQL
+SELECT * 
+FROM comment 
+WHERE reply != -1 and classid = 任意のクラスid
+ORDER BY reply ASC, time ASC;
+
+・AJAX　Jquery
+返却値がないとfailが発火する
+commentを送信した後、ページを更新するとパケットが重複して送信される
+
+
+セッション変数
+login
+nickname
+stuid
+lastId
+
+現在の進捗状況-------------------------------------------
+
+・未完成
+過去問のアップロード処理の作成
+select_past_probremのログインボタンを押したときレイアウトが崩れる
+過去問テーブルに前期、中期、後期のカラムを追加
+add_user, add_class画面のレイアウトの作成 
+
+---------------------------------------------------------
